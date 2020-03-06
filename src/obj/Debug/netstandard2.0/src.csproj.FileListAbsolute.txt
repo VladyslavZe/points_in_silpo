@@ -1,0 +1,8 @@
+/home/intern/Documents/points_in_silpo/src/obj/Debug/netstandard2.0/src.csprojAssemblyReference.cache
+/home/intern/Documents/points_in_silpo/src/obj/Debug/netstandard2.0/src.AssemblyInfoInputs.cache
+/home/intern/Documents/points_in_silpo/src/obj/Debug/netstandard2.0/src.AssemblyInfo.cs
+/home/intern/Documents/points_in_silpo/src/bin/Debug/netstandard2.0/src.deps.json
+/home/intern/Documents/points_in_silpo/src/bin/Debug/netstandard2.0/src.dll
+/home/intern/Documents/points_in_silpo/src/bin/Debug/netstandard2.0/src.pdb
+/home/intern/Documents/points_in_silpo/src/obj/Debug/netstandard2.0/src.dll
+/home/intern/Documents/points_in_silpo/src/obj/Debug/netstandard2.0/src.pdb
