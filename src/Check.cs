@@ -6,9 +6,8 @@ namespace SilpoMarket
 {
   public class Check
   {
-    public List<Product> products { get; set; }
-    public int totalCost { get; set; }
-
+    public List<Product> products;
+    public int totalCost = 0;
     public int getTotalCost()
     {
       return totalCost;

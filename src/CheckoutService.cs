@@ -10,8 +10,6 @@ namespace SilpoMarket
     {
       check = new Check();
       check.products = new List<Product>();
-      check.totalCost = 0;
-
     }
     public void addProduct(Product product)
     {
