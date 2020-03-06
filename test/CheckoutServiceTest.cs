@@ -6,31 +6,33 @@ namespace SilpoTest
 {
   public class CheckoutServiceTest
   {
-
+    private CheckoutService _checkoutService;
+    public CheckoutServiceTest()
+    {
+      _checkoutService = new CheckoutService();
+    }
     [Fact]
     void closeCheck__withOneProduct()
     {
-      CheckoutService checkoutService = new CheckoutService();
-      checkoutService.openCheck();
+      _checkoutService.OpenCheck();
 
-      checkoutService.addProduct(new Product(7, "Milk"));
-      Check check = checkoutService.closeCheck();
+      _checkoutService.AddProduct(new Product(7, "Milk"));
+      Check check = _checkoutService.CloseCheck();
 
-      Assert.Equal(7, check.getTotalCost());
+      Assert.Equal(7, check.GetTotalCost());
     }
 
     [Fact]
     void closeCheck__withTwoProducts()
     {
-      CheckoutService checkoutService = new CheckoutService();
-      checkoutService.openCheck();
+      _checkoutService.OpenCheck();
 
-      checkoutService.addProduct(new Product(7, "Milk"));
-      checkoutService.addProduct(new Product(3, "Bred"));
+      _checkoutService.AddProduct(new Product(7, "Milk"));
+      _checkoutService.AddProduct(new Product(3, "Bred"));
 
-      Check check = checkoutService.closeCheck();
+      Check check = _checkoutService.CloseCheck();
 
-      Assert.Equal(10, check.getTotalCost());
+      Assert.Equal(10, check.GetTotalCost());
     }
   }
 }

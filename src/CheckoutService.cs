@@ -6,17 +6,17 @@ namespace SilpoMarket
   public class CheckoutService
   {
     private Check check;
-    public void openCheck()
+    public void OpenCheck()
     {
       check = new Check();
       check.products = new List<Product>();
     }
-    public void addProduct(Product product)
+    public void AddProduct(Product product)
     {
       check.products.Add(product);
     }
 
-    public Check closeCheck()
+    public Check CloseCheck()
     {
       foreach (Product product in check.products)
       {

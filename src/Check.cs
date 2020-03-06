@@ -8,7 +8,7 @@ namespace SilpoMarket
   {
     public List<Product> products;
     public int totalCost = 0;
-    public int getTotalCost()
+    public int GetTotalCost()
     {
       return totalCost;
     }
