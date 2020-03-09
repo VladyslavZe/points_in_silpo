@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 
-
 namespace SilpoMarket
 {
   public class Check
@@ -16,7 +15,7 @@ namespace SilpoMarket
       }
       return totalCost;
     }
-    public void AddProduct(Product product)
+    protected internal void AddProduct(Product product)
     {
       products.Add(product);
     }

@@ -18,6 +18,7 @@ namespace SilpoTest
 
       _checkoutService.AddProduct(new Product(7, "Milk"));
       Check check = _checkoutService.CloseCheck();
+      // check.AddProduct((new Product(7, "Milk"));
 
       Assert.Equal(7, check.GetTotalCost());
     }
