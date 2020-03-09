@@ -6531,23 +6531,23 @@
     ]
   },
   "packageFolders": {
-    "/home/intern/.nuget/packages/": {},
+    "/home/ubuntu/.nuget/packages/": {},
     "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/intern/Documents/points_in_silpo/test/test.csproj",
+      "projectUniqueName": "/home/ubuntu/Документы/points_in_silpo/test/test.csproj",
       "projectName": "test",
-      "projectPath": "/home/intern/Documents/points_in_silpo/test/test.csproj",
-      "packagesPath": "/home/intern/.nuget/packages/",
-      "outputPath": "/home/intern/Documents/points_in_silpo/test/obj/",
+      "projectPath": "/home/ubuntu/Документы/points_in_silpo/test/test.csproj",
+      "packagesPath": "/home/ubuntu/.nuget/packages/",
+      "outputPath": "/home/ubuntu/Документы/points_in_silpo/test/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/intern/.nuget/NuGet/NuGet.Config"
+        "/home/ubuntu/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -6558,8 +6558,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/home/intern/Documents/points_in_silpo/src/src.csproj": {
-              "projectPath": "/home/intern/Documents/points_in_silpo/src/src.csproj"
+            "/home/ubuntu/Документы/points_in_silpo/src/src.csproj": {
+              "projectPath": "/home/ubuntu/Документы/points_in_silpo/src/src.csproj"
             }
           }
         }

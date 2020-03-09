@@ -6,11 +6,19 @@ namespace SilpoMarket
 {
   public class Check
   {
-    public List<Product> products;
-    public int totalCost = 0;
+    private List<Product> products = new List<Product>();
     public int GetTotalCost()
     {
+      int totalCost = 0;
+      foreach (Product product in this.products)
+      {
+        totalCost += product.price;
+      }
       return totalCost;
+    }
+    public void AddProduct(Product product)
+    {
+      products.Add(product);
     }
   }
 }
