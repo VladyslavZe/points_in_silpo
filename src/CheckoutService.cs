@@ -12,12 +12,19 @@ namespace SilpoMarket
     }
     public void AddProduct(Product product)
     {
+      if (check == null)
+      {
+        OpenCheck();
+      }
+
       check.AddProduct(product);
     }
 
     public Check CloseCheck()
     {
-      return check;
+      Check closedCheck = check;
+      check = null;
+      return closedCheck;
     }
 
   }

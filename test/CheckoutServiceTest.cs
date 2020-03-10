@@ -10,12 +10,12 @@ namespace SilpoTest
     public CheckoutServiceTest()
     {
       _checkoutService = new CheckoutService();
+      _checkoutService.OpenCheck();
+
     }
     [Fact]
     void closeCheck__withOneProduct()
     {
-      _checkoutService.OpenCheck();
-
       _checkoutService.AddProduct(new Product(7, "Milk"));
       Check check = _checkoutService.CloseCheck();
       // check.AddProduct((new Product(7, "Milk"));
@@ -26,21 +26,16 @@ namespace SilpoTest
     [Fact]
     void closeCheck__withTwoProducts()
     {
-      _checkoutService.OpenCheck();
-
       _checkoutService.AddProduct(new Product(7, "Milk"));
       _checkoutService.AddProduct(new Product(3, "Bread"));
-
       Check check = _checkoutService.CloseCheck();
 
       Assert.Equal(10, check.GetTotalCost());
     }
 
     [Fact]
-
     void addProduct__whenCheckIsClosed__opensNewCheck()
     {
-
       _checkoutService.AddProduct(new Product(7, "Milk"));
       Check milkCheck = _checkoutService.CloseCheck();
       Assert.Equal(7, milkCheck.GetTotalCost());
@@ -49,6 +44,16 @@ namespace SilpoTest
       Check breadCheck = _checkoutService.CloseCheck();
       Assert.Equal(3, breadCheck.GetTotalCost());
 
+    }
+
+    [Fact]
+    void closeCheck__calcTotalPoints()
+    {
+      _checkoutService.AddProduct(new Product(7, "Milk"));
+      _checkoutService.AddProduct(new Product(3, "Bread"));
+      Check check = _checkoutService.CloseCheck();
+
+      Assert.Equal(10, check.GetTotalPoints());
     }
   }
 }
