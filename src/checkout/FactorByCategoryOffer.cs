@@ -1,15 +1,18 @@
 namespace SilpoMarket
 {
-  public class FactorByCategoryOffer : AnyGoodsOffer
+  public class FactorByCategoryOffer : Offer
   {
     public readonly Category category;
     public readonly int factor;
     public FactorByCategoryOffer(Category category, int factor)
-     : base(0, 0)
     {
 
       this.category = category;
       this.factor = factor;
+    }
+
+    public override void apply(Check check)
+    {
     }
   }
 }

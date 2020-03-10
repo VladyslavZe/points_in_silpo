@@ -26,20 +26,23 @@ namespace SilpoMarket
       return closedCheck;
     }
 
-    public void UseOffer(AnyGoodsOffer anyGoodsOffer)
+    public void UseOffer(Offer offer)
     {
-      if (anyGoodsOffer.GetType() == typeof(FactorByCategoryOffer))
+      if (offer.GetType() == typeof(FactorByCategoryOffer))
       {
-        FactorByCategoryOffer fbOffer = (FactorByCategoryOffer)anyGoodsOffer;
+        FactorByCategoryOffer fbOffer = (FactorByCategoryOffer)offer;
         int points = check.getCostByCategory(fbOffer.category);
-        // check.AddPoints(points);
         check.AddPoints(points * (fbOffer.factor - 1));
       }
       else
       {
-        if (anyGoodsOffer.totalCost <= check.GetTotalCost())
+        if (offer.GetType() == typeof(AnyGoodsOffer))
         {
-          check.AddPoints(anyGoodsOffer.points);
+          AnyGoodsOffer agOffer = (AnyGoodsOffer)offer;
+          if (agOffer.totalCost <= check.GetTotalCost())
+          {
+            check.AddPoints(agOffer.points);
+          }
         }
       }
     }

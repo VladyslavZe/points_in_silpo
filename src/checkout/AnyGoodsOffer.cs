@@ -1,6 +1,6 @@
 namespace SilpoMarket
 {
-  public class AnyGoodsOffer
+  public class AnyGoodsOffer : Offer
   {
     public readonly int totalCost;
     public readonly int points;
@@ -8,6 +8,10 @@ namespace SilpoMarket
     {
       this.totalCost = totalCost;
       this.points = points;
+    }
+
+    public override void apply(Check check)
+    {
     }
   }
 }
