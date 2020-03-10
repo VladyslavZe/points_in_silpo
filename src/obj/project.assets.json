@@ -179,23 +179,23 @@
     ]
   },
   "packageFolders": {
-    "/home/ubuntu/.nuget/packages/": {},
+    "/home/intern/.nuget/packages/": {},
     "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ubuntu/Документы/points_in_silpo/src/src.csproj",
+      "projectUniqueName": "/home/intern/Documents/points_in_silpo/src/src.csproj",
       "projectName": "src",
-      "projectPath": "/home/ubuntu/Документы/points_in_silpo/src/src.csproj",
-      "packagesPath": "/home/ubuntu/.nuget/packages/",
-      "outputPath": "/home/ubuntu/Документы/points_in_silpo/src/obj/",
+      "projectPath": "/home/intern/Documents/points_in_silpo/src/src.csproj",
+      "packagesPath": "/home/intern/.nuget/packages/",
+      "outputPath": "/home/intern/Documents/points_in_silpo/src/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/ubuntu/.nuget/NuGet/NuGet.Config"
+        "/home/intern/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
