@@ -28,10 +28,22 @@ namespace SilpoMarket
 
     public void UseOffer(AnyGoodsOffer anyGoodsOffer)
     {
-      if (anyGoodsOffer.totalCost <= check.GetTotalCost())
+      if (anyGoodsOffer.GetType() == typeof(FactorByCategoryOffer))
       {
-        check.AddPoints(anyGoodsOffer.points);
+        FactorByCategoryOffer fbOffer = (FactorByCategoryOffer)anyGoodsOffer;
+        int points = check.getCostByCategory(fbOffer.category);
+        // check.AddPoints(points);
+        check.AddPoints(points * (fbOffer.factor - 1));
+      }
+      else
+      {
+        if (anyGoodsOffer.totalCost <= check.GetTotalCost())
+        {
+          check.AddPoints(anyGoodsOffer.points);
+        }
       }
     }
+
+
   }
 }

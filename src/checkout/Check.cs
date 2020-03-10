@@ -30,5 +30,20 @@ namespace SilpoMarket
     {
       this.points += points;
     }
+
+    internal int getCostByCategory(Category category)
+    {
+      int result = 0;
+      foreach (Product product in this.products)
+      {
+        if (product.category == category)
+        {
+          result += product.price;
+        }
+      }
+      // System.Console.WriteLine(result);
+
+      return result;
+    }
   }
 }
