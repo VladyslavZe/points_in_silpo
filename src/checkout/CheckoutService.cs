@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace SilpoMarket
@@ -27,5 +26,12 @@ namespace SilpoMarket
       return closedCheck;
     }
 
+    public void UseOffer(AnyGoodsOffer anyGoodsOffer)
+    {
+      if (anyGoodsOffer.totalCost <= check.GetTotalCost())
+      {
+        check.AddPoints(anyGoodsOffer.points);
+      }
+    }
   }
 }

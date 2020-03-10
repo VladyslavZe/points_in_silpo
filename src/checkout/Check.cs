@@ -6,6 +6,7 @@ namespace SilpoMarket
   public class Check
   {
     private List<Product> products = new List<Product>();
+    private int points = 0;
     public int GetTotalCost()
     {
       int totalCost = 0;
@@ -22,7 +23,12 @@ namespace SilpoMarket
 
     public int GetTotalPoints()
     {
-      return GetTotalCost();
+      return GetTotalCost() + this.points;
+    }
+
+    protected internal void AddPoints(int points)
+    {
+      this.points += points;
     }
   }
 }
