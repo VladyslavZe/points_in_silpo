@@ -12,6 +12,10 @@ namespace SilpoMarket
 
     public override void apply(Check check)
     {
+      if (check.GetTotalCost() >= this.totalCost)
+      {
+        check.AddPoints(this.points);
+      }
     }
   }
 }

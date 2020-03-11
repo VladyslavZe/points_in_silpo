@@ -31,18 +31,20 @@ namespace SilpoMarket
       if (offer.GetType() == typeof(FactorByCategoryOffer))
       {
         FactorByCategoryOffer fbOffer = (FactorByCategoryOffer)offer;
-        int points = check.getCostByCategory(fbOffer.category);
-        check.AddPoints(points * (fbOffer.factor - 1));
+        fbOffer.apply(check);
+        // int points = check.getCostByCategory(fbOffer.category);
+        // check.AddPoints(points * (fbOffer.factor - 1));
       }
       else
       {
         if (offer.GetType() == typeof(AnyGoodsOffer))
         {
           AnyGoodsOffer agOffer = (AnyGoodsOffer)offer;
-          if (agOffer.totalCost <= check.GetTotalCost())
-          {
-            check.AddPoints(agOffer.points);
-          }
+          agOffer.apply(check);
+          // if (check.GetTotalCost() >= agOffer.totalCost)
+          // {
+          //   check.AddPoints(agOffer.points);
+          // }
         }
       }
     }

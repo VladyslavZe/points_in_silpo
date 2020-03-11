@@ -41,8 +41,6 @@ namespace SilpoMarket
           result += product.price;
         }
       }
-      // System.Console.WriteLine(result);
-
       return result;
     }
   }

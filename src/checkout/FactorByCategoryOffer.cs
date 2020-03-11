@@ -13,6 +13,8 @@ namespace SilpoMarket
 
     public override void apply(Check check)
     {
+      int points = check.getCostByCategory(this.category);
+      check.AddPoints(points * (this.factor - 1));
     }
   }
 }
